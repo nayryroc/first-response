@@ -1,0 +1,45 @@
+.table-of-contents{
+    display: flex;
+    gap: 50px;
+}
+
+
+
+.bookmark{
+    color: #226661;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.4s;
+}
+
+.bookmark:hover,
+.bookmark:active,
+.bookmark:focus{
+    text-decoration-color: #226661;
+}
+
+.tutorial{
+    margin-bottom: 50px;
+}
+
+.section__blue .text,
+.section__blue .title,
+.section__blue li{
+    color: #fff;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+@media(max-width: 550px){
+    .table-of-contents{
+        flex-wrap: wrap;
+    }
+
+    .table-of-contents > li{
+        width: 100%;
+    }
+}
+

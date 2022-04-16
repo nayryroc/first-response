@@ -1,0 +1,188 @@
+.domain-model{
+
+}
+.domain-model__image{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+.use-case__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.use-case__col{
+    width: 75%;
+    padding-right: 50px;
+}
+
+.use-case__col:last-child{
+    width: 25%;
+    padding-right: 0;
+}
+
+.use-case__slider-controls{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+}
+
+.use-case__slider-controls button{
+    width: 25px;
+    height: 50px;
+    border: none;
+    background-color: #53948e;
+    padding: 0.4rem 0;
+    color: transparent;
+    transition: background-color 0.4s;
+    position: relative;
+
+}
+
+.use-case__slider-controls button:last-child::after{
+    content: '>';
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.use-case__slider-controls button:first-child::after{
+    content: '<';
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.use-case__slider-controls button:hover{
+    background-color: #226661;
+    cursor: pointer;
+}
+
+.use-case-wrapper{
+    position: relative;
+}
+
+
+
+.robustness-diagram__slider-controls{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+}
+
+.robustness-diagram__slider-controls button{
+    width: 25px;
+    height: 50px;
+    border: none;
+    background-color: #53948e;
+    padding: 0.4rem 0;
+    color: transparent;
+    transition: background-color 0.4s;
+    position: relative;
+
+}
+
+.robustness-diagram__slider-controls button:last-child::after{
+    content: '>';
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.robustness-diagram__slider-controls button:first-child::after{
+    content: '<';
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.robustness-diagram__slider-controls button:hover{
+    background-color: #226661;
+    cursor: pointer;
+}
+
+.robustness-diagram-wrapper{
+    position: relative;
+}
+
+.robustness-diagrams__slide{
+    padding: 0 50px;
+}
+
+
+@media(max-width: 1150px){
+    .use-case__wrapper{
+        flex-wrap: wrap;
+    }
+    .use-case__col{
+        width: 100%;
+    }
+
+    .use-case__col:last-child{
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media(max-width: 450px){
+    .robustness-diagrams__slide{
+        padding: 0 30px;
+    }
+
+    .use-case__wrapper{
+        padding: 0 30px;
+    }
+}

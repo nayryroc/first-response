@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="documentation/documentation.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick-1.8.1/slick/slick.css"/>
+</head>
+<body>
+<div class="page">
+    <div class="section section_none section_header">
+        <div class="section__content section__content_lg">
+            <header class="header">
+                <a href="index.html" class="header__logo">
+                    <p class="header__title title">First Response</p>
+                </a>
+                <nav class="header__nav">
+                    <a href="about.html" class="header__nav-item link">About</a>
+                    <a href="support.html" class="header__nav-item link">Support</a>
+                    <a href="documentation.html" class="header__nav-item link">Documentation</a>
+<!--                    <a href="tryme/tryme.html" class="header__nav-item link">Try Me</a>-->
+                </nav>
+            </header>
+        </div>
+    </div>
+
+    <div class="section section_none">
+        <div class="section__content section__content_none">
+            <div class="intro">
+                <div class="intro__image">
+                    <p class="intro__title title">Documentation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="section__content">
+            <h2 class="title">High Level Requirements</h2>
+            <ol>
+                <li><p class="text">First responders can respond to incidents (w/custom type) ex. station, scene, unavailable.</p></li>
+                <li><p class="text">Get direction to the incident using Google Maps</p></li>
+                <li><p class="text">County can submit incidents using a simple web application</p></li>
+                <li><p class="text">Force notifications through silent/DND mode</p></li>
+                <li>
+                    <p class="text">Plan fire department events</p>
+                    <ul>
+                        <li><p class="text">RSVP</p></li>
+                        <li><p class="text">Pair w/ user's calendar</p></li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="text">Send Announcements</p>
+                    <ul>
+                        <li><p class="text">Select specific groups (Firefighters, EMS, officers, etc.)</p></li>
+                    </ul>
+                </li>
+                <li><p class="text">Chat w/ users</p></li>
+                <li><p class="text">Admin access to users, privileges, rank assignments</p></li>
+                <li><p class="text">Have records of previous incidents</p></li>
+                <li><p class="text">Dynamic arrival times</p></li>
+                <li><p class="text">View box card</p></li>
+                <li><p class="text">Handle officer reports (create, edit, autofill)</p></li>
+            </ol>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section__content">
+            <h2 class="title">Domain Model</h2>
+            <div class="domain-model">
+                <img src="images/domainmodel.png" alt="The domain model for our project" class="domain-model__image">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="section__content">
+            <h2 class="title">Use Case Text and GUI Prototypes</h2>
+            <div class="use-case-wrapper">
+                <div class="use-case">
+
+
+
+                    <div class="use-case__slide">
+                        <div class="use-case__wrapper">
+                            <div class="use-case__col">
+                                <p class="title title_sm">Login Page</p>
+                                <p class="text"><strong>BASIC COURSE</strong></p>
+                                <ul>
+                                    <li><p class="text">The <span class="underline">user</span> logs into their account.</p></li>
+                                </ul>
+
+                                <p class="text"><strong>ALTERNATE COURSES</strong></p>
+                                <ul>
+                                    <li><p class="text"><strong>Wrong username:</strong> The <span class="underline">user</span> will be given a generic login error message</p></li>
+                                    <li><p class="text"><strong>Wrong password:</strong> The <span class="underline">user</span> will be given a generic login error message</p></li>
+                                </ul>
+                            </div>
+                            <div class="use-case__col">
+                                <img src="images/login.png" alt="A GUI prototype of the login screen that allows the user to login to their account" class="use-case__img">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="use-case__slide">
+                        <div class="use-case__wrapper">
+                            <div class="use-case__col">
+                                <p class="title title_sm">Home Page</p>
+                                <p class="text"><strong>BASIC COURSE</strong></p>
+                                <ul>
+                                    <li><p class="text">The <span class="underline">users</span> can see any ongoing <span class="underline">incidents</span> as well as the <span class="underline">users</span> who are <span class="underline">responding</span> to one of the <span class="underline">incidents</span>. A <span class="underline">user</span> can click on an <span class="underline">incident</span> to get more information about the specific <span class="underline">incident</span> on the <span class="underline">Incident Page</span>.</p></li>
+                                </ul>
+
+                                <p class="text"><strong>ALTERNATE COURSES</strong></p>
+                                <ul>
+                                    <li><p class="text"><strong>No incidents:</strong> If there are no <span class="underline">incidents</span> the section will read "No Incidents" and will not be clickable.</p></li>
+                                    <li><p class="text"><strong>No responders:</strong> If there are no <span class="underline">users</span> <span class="underline">responding</span> the section will read "No Responders."</p></li>
+                                    <li><p class="text"><strong>Too much content:</strong> If there are too many cards on the scree the sections will be scrollable.</p></li>
+                                </ul>
+                            </div>
+                            <div class="use-case__col">
+                                <img src="images/home.png" alt="A GUI prototype of the home screen that includes a list of incidents and a list of users responding" class="use-case__img">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="use-case__slide">
+                        <div class="use-case__wrapper">
+                            <div class="use-case__col">
+                                <p class="title title_sm">Incident Page</p>
+                                <p class="text"><strong>BASIC COURSE</strong></p>
+                                <ul>
+                                    <li><p class="text">A <span class="underline">user</span> can respond to an <span class="underline">incident</span> by clicking on one of the <span class="underline">buttons</span>. The number of <span class="underline">users</span> <span class="underline">responding</span> can be viewed in the top right corner of the screen. At the bottom of the screen the user can use a <span class="underline">map</span> to see the location of the <span class="underline">incident</span> and get <span class="underline">directions</span></p></li>
+                                </ul>
+
+                                <p class="text"><strong>ALTERNATE COURSES</strong></p>
+                                <ul>
+                                    <li><p class="text"><strong>Invalid Address:</strong> The "Google Map" will not display the correct location.</p></li>
+                                </ul>
+                            </div>
+                            <div class="use-case__col">
+                                <img src="images/incidentpage.png" alt="A GUI prototype of the incident page that display details about the incident and gives the user options to respond" class="use-case__img">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="use-case__slide">
+                        <div class="use-case__wrapper">
+                            <div class="use-case__col">
+                                <p class="title title_sm">Edit User Page</p>
+                                <p class="text"><strong>BASIC COURSE</strong></p>
+                                <ul>
+                                    <li><p class="text">The <span class="underline">admin</span> can bring this screen up to <span class="underline">edit</span> users. The <span class="underline">admin</span> can search for a user that will be edited via the search bar. Editable features include name, rank, phone number, picture, and address.</p></li>
+                                </ul>
+
+                                <p class="text"><strong>ALTERNATE COURSES</strong></p>
+                                <ul>
+                                    <li><p class="text"><strong>User can't be found:</strong> There will be no clickable options.</p></li>
+                                    <li><p class="text"><strong>Same name in the search:</strong> Both names will be displayed, but some difference must be there, or it would not be in the database.</p></li>
+                                </ul>
+                            </div>
+                            <div class="use-case__col">
+                                <img src="images/edituser.png" alt="A GUI prototype of the edit user screen" class="use-case__img">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="use-case__slide">
+                        <div class="use-case__wrapper">
+                            <div class="use-case__col">
+                                <p class="title title_sm">Announcement Page</p>
+                                <p class="text"><strong>BASIC COURSE</strong></p>
+                                <ul>
+                                    <li><p class="text">The <span class="underline">user</span> can see a list of announcements and a description of each. The announcements will be sorted from newest to oldest.</p></li>
+                                </ul>
+
+                                <p class="text"><strong>ALTERNATE COURSES</strong></p>
+                                <ul>
+                                    <li><p class="text"><strong>No announcements:</strong> The section will read "No Announcements."</p></li>
+                                    <li><p class="text"><strong>Announcements overflow screen:</strong> The list of <span class="underline">announcements</span> will be scrollable.</p></li>
+                                </ul>
+                            </div>
+                            <div class="use-case__col">
+                                <img src="images/announcements.png" alt="A mockup for the announcements page containing a list of announcement items" class="use-case__img">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="use-case__slide">
+                        <div class="use-case__wrapper">
+                            <div class="use-case__col">
+                                <p class="title title_sm">Chat Page</p>
+                                <p class="text"><strong>BASIC COURSE</strong></p>
+                                <ul>
+                                    <li><p class="text">The <span class="underline">user</span> can chat between other <span class="underline">first responders</span> in the <span class="underline">department</span></p></li>
+                                </ul>
+
+                                <p class="text"><strong>ALTERNATE COURSES</strong></p>
+                                <ul>
+                                    <li><p class="text"><strong>No users to chat with:</strong> No <span class="underline">chat</span> can be sent</p></li>
+                                    <li><p class="text"><strong>Message is too long:</strong> The <span class="underline">user</span> will be notified and the message will not be sent</p></li>
+                                </ul>
+                            </div>
+                            <div class="use-case__col">
+                                <img src="images/chat.png" alt="The chat screen with a list of active chats to select from" class="use-case__img">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="use-case__slide">
+                        <div class="use-case__wrapper">
+                            <div class="use-case__col">
+                                <p class="title title_sm">Events Page</p>
+                                <p class="text"><strong>BASIC COURSE</strong></p>
+                                <ul>
+                                    <li><p class="text">The <span class="underline">users</span> can see any upcoming <span class="underline">events</span> as well as a description of the event. A user can click on a specific <span class="underline">event</span> to go to the <span class="underline">Event Page</span>.</p></li>
+                                </ul>
+
+                                <p class="text"><strong>ALTERNATE COURSES</strong></p>
+                                <ul>
+                                    <li><p class="text"><strong>No events:</strong> If there are no upcoming <span class="underline">events</span> the section will read "No Events."</p></li>
+                                    <li><p class="text"><strong>Content overflow:</strong> If there are too many <span class="underline">events</span> on the screen the section will be scrollable.</p></li>
+                                </ul>
+                            </div>
+                            <div class="use-case__col">
+                                <img src="images/events.png" alt="A GUI prototype of the events page which contains a list of upcoming events" class="use-case__img">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="use-case__slide">
+                        <div class="use-case__wrapper">
+                            <div class="use-case__col">
+                                <p class="title title_sm">Event Page</p>
+                                <p class="text"><strong>BASIC COURSE</strong></p>
+                                <ul>
+                                    <li><p class="text">The <span class="underline">user</span> can view <span class="underline">events</span> sent out by other <span class="underline">users</span>. The <span class="underline">user</span> can sign up for events.</p></li>
+                                </ul>
+
+                                <p class="text"><strong>ALTERNATE COURSES</strong></p>
+                                <ul>
+                                    <li><p class="text"><strong>The event was deleted:</strong> The <span class="underline">event</span> will no longer be visible.</p></li>
+                                    <li><p class="text"><strong>The user closes the app before confirmation:</strong> The <span class="underline">user</span> will not be on the participants list.</p></li>
+                                </ul>
+                            </div>
+                            <div class="use-case__col">
+                                <img src="images/event.png" alt="A GUI mockup of the event page containing details for an event" class="use-case__img">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="use-case__slide">
+                        <div class="use-case__wrapper">
+                            <div class="use-case__col">
+                                <p class="title title_sm">Report Page</p>
+                                <p class="text"><strong>BASIC COURSE</strong></p>
+                                <ul>
+                                    <li><p class="text">A <span class="underline">user</span> can fill out a report after an <span class="undeline">incident</span>.</p></li>
+                                </ul>
+
+                                <p class="text"><strong>ALTERNATE COURSES</strong></p>
+                                <ul>
+                                    <li><p class="text"><strong>Missing information from the incident:</strong> All the autofilled information can be edited</p></li>
+                                    <li><p class="text"><strong>No report was added:</strong> No <span class="underline">report</span> will be submitted for the <span class="underline">incident</span>.</p></li>
+                                </ul>
+                            </div>
+                            <div class="use-case__col">
+                                <img src="images/report.png" alt="A GUI prototype of the report page that allows a user to enter details about an incident" class="use-case__img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="use-case__slider-controls"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="section__content">
+            <h2 class="title">Use Case Diagram</h2>
+            <div class="use-case-diagram">
+                <img src="images/usecase.png" alt="The use case diagram for our project" class="use-case-diagram__image">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="section__content">
+            <h2 class="title">Robustness Diagrams</h2>
+            <div class="robustness-diagram-wrapper">
+                <div class="robustness-diagrams">
+
+
+                    <div class="robustness-diagrams__slide">
+                        <img src="images/robust-login.PNG" alt="">
+                    </div>
+
+                    <div class="robustness-diagrams__slide">
+                        <img src="images/robust-home.PNG" alt="">
+                    </div>
+
+                    <div class="robustness-diagrams__slide">
+                        <img src="images/robust-incident-group.PNG" alt="">
+                    </div>
+
+                    <div class="robustness-diagrams__slide">
+                        <img src="images/robust-incident.PNG" alt="">
+                    </div>
+
+                    <div class="robustness-diagrams__slide">
+                        <img src="images/robust-edit-user.PNG" alt="">
+                    </div>
+
+                    <div class="robustness-diagrams__slide">
+                        <img src="images/robust-announcements.PNG" alt="">
+                    </div>
+
+                    <div class="robustness-diagrams__slide">
+                        <img src="images/robust-chat.PNG" alt="">
+                    </div>
+
+                    <div class="robustness-diagrams__slide">
+                        <img src="images/robust-event.PNG" alt="">
+                    </div>
+
+                    <div class="robustness-diagrams__slide">
+                        <img src="images/robust-responding.PNG" alt="">
+                    </div>
+
+
+                </div>
+                <div class="robustness-diagram__slider-controls"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="section section_none section_header">
+        <div class="section__content section__content_lg">
+            <footer class="footer">
+                <a href="index.html" class="footer__logo">
+                    <p class="footer__title title">First Response</p>
+                </a>
+                <nav class="footer__nav">
+                    <a href="about.html" class="footer__nav-item link">About</a>
+                    <a href="support.html" class="footer__nav-item link">Support</a>
+                    <a href="documentation.html" class="footer__nav-item link">Documentation</a>
+<!--                    <a href="tryme/tryme.html" class="footer__nav-item link">Try Me</a>-->
+                </nav>
+            </footer>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="jquery/jquery.min.js"></script>
+<script type="text/javascript" src="slick-1.8.1/slick-1.8.1/slick/slick.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
